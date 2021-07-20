@@ -1,0 +1,15 @@
+{
+    "name": "andygrunwald/your-redis-connection-deserves-a-name",
+    "description": "Showcase how to assign a name to a redis connection in PHP.",
+    "type": "project",
+    "require": {
+        "predis/predis": "^1.1"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Andy Grunwald",
+            "email": "andygrunwald@gmail.com"
+        }
+    ]
+}
