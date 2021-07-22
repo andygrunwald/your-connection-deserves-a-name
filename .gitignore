@@ -3,3 +3,6 @@ redis/php/vendor
 
 # Redis: Go
 redis/go/your-connection-deserves-a-name
+
+# RabbitMQ: Go
+rabbitmq/go/your-connection-deserves-a-name

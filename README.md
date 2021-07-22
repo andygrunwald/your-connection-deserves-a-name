@@ -6,3 +6,4 @@
 - [ ] Add logo
 - [ ] Add license
 - [ ] Add description
+- [ ] Add pictures

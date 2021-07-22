@@ -1,6 +1,6 @@
-# Your redis connection deserves a name
+# Your RabbitMQ connection deserves a name
 
-Examples on how to assign a particular name to a redis connection.
+Examples on how to assign a particular name to a RabbitMQ connection.
 
 Programmming languages:
 
