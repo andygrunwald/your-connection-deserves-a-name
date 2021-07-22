@@ -1,5 +1,5 @@
 <?php
-require_once './vendor/autoload.php';
+require_once __DIR__ . '/vendor/autoload.php';
 
 define('REDIS_ADDRESS', 'tcp://127.0.0.1:6379');
 define('REDIS_CONNECTION_NAME', 'your-connection-deserves-a-name-php');

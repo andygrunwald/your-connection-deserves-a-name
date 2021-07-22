@@ -1,0 +1,15 @@
+{
+    "name": "andygrunwald/your-rabbitmq-connection-deserves-a-name",
+    "description": "Showcase how to assign a name to a RabbitMQ connection in PHP",
+    "type": "project",
+    "require": {
+        "php-amqplib/php-amqplib": "^3.0"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Andy Grunwald",
+            "email": "andygrunwald@gmail.com"
+        }
+    ]
+}

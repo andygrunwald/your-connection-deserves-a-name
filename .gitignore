@@ -1,8 +1,11 @@
 # Redis: PHP
-redis/php/vendor
+redis/php/vendor/
 
 # Redis: Go
 redis/go/your-connection-deserves-a-name
+
+# Redis: PHP
+rabbitmq/php/vendor/
 
 # RabbitMQ: Go
 rabbitmq/go/your-connection-deserves-a-name
