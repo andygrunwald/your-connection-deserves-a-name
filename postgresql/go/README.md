@@ -1,6 +1,6 @@
-# Your PostgreSQL connection deserves a name: Go edition
+# your _PostgreSQL_ connection deserves a name: Go edition
 
-An example on how to assign a name to a PostgreSQL connection in Go(lang).
+An example on how to assign a name to a [PostgreSQL](https://www.postgresql.org/) connection in Go(lang).
 
 ## Get it running
 
@@ -42,4 +42,6 @@ In the column `application_name` you can confirm your connection name.
 
 ## Don't know what this is all about?
 
-Checkout the [projects README](https://github.com/andygrunwald/your-connection-deserves-a-name#readme) to find out more.
+Read the original blog post [_your connection deserves a name @ andygrunwald.com_](https://andygrunwald.com/blog/your-connection-deserves-a-name/ "Article your connection deserves a name at Andy Grunwalds blog").
+
+Additionally, you can check out the [projects README](https://github.com/andygrunwald/your-connection-deserves-a-name#readme).

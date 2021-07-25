@@ -9,3 +9,6 @@ rabbitmq/php/vendor/
 
 # RabbitMQ: Go
 rabbitmq/go/your-connection-deserves-a-name
+
+# PostgreSQL: Go
+postgresql/go/your-connection-deserves-a-name
