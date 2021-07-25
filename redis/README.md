@@ -1,6 +1,6 @@
-# Your redis connection deserves a name
+# your _redis_ connection deserves a name
 
-Examples on how to assign a particular name to a redis connection.
+Examples on how to assign a particular name to a [redis](https://redis.io/) connection.
 
 Programmming languages:
 
