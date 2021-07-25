@@ -1,5 +1,7 @@
 # your connection deserves a name
 
+![Logo](images/assign-a-name-to-your-connection.png)
+
 ## Missing a system or a programing language?
 
 If you
