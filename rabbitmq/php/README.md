@@ -1,6 +1,6 @@
-# Your RabbitMQ connection deserves a name: PHP edition
+# your _RabbitMQ_ connection deserves a name: PHP edition
 
-An example on how to assign a name to a RabbitMQ connection in PHP.
+An example on how to assign a name to a [RabbitMQ](https://www.rabbitmq.com/) connection in PHP.
 
 ## Get it running
 
@@ -36,4 +36,6 @@ You should see something like
 
 ## Don't know what this is all about?
 
-Checkout the [projects README](https://github.com/andygrunwald/your-connection-deserves-a-name#readme) to find out more.
+Read the original blog post [_your connection deserves a name @ andygrunwald.com_](https://andygrunwald.com/blog/your-connection-deserves-a-name/ "Article your connection deserves a name at Andy Grunwalds blog").
+
+Additionally, you can check out the [projects README](https://github.com/andygrunwald/your-connection-deserves-a-name#readme).

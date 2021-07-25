@@ -1,6 +1,6 @@
 # your _PostgreSQL_ connection deserves a name: Go edition
 
-An example on how to assign a name to a [PostgreSQL](https://www.postgresql.org/) connection in Go(lang).
+An example on how to assign a name to a [PostgreSQL](https://www.postgresql.org/) connection in Go.
 
 ## Get it running
 
