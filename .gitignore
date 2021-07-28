@@ -12,3 +12,6 @@ rabbitmq/go/your-connection-deserves-a-name
 
 # PostgreSQL: Go
 postgresql/go/your-connection-deserves-a-name
+
+# MySQL: Go
+mysql/go/your-connection-deserves-a-name
