@@ -14,6 +14,7 @@
 
 This repository provides you example code for various systems in different programming languages:
 
+- [MySQL](./mysql/)
 - [redis](./redis/)
 - [RabbitMQ](./rabbitmq/)
 - [PostgreSQL](./postgresql/)
