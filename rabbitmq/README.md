@@ -19,7 +19,7 @@ This is how it looks like in Go:
 ```go
 config := amqp.Config{
     Properties: amqp.Table{
-        "connection_name": "your-connection-deserves-a-name-go",
+        "connection_name": "currency-conversion-app",
     },
 }
 conn, err := amqp.DialConfig("amqp://guest:guest@127.0.0.1:5672/", config)
