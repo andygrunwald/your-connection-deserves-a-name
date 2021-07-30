@@ -29,14 +29,14 @@ $ ./your-connection-deserves-a-name
 You should see something like
 
 ```
-2021/07/22 10:48:51 Connecting to RabbitMQ on amqp://guest:guest@127.0.0.1:5672/
-2021/07/22 10:48:51 Connecting to RabbitMQ on amqp://guest:guest@127.0.0.1:5672/ ... Successful
-2021/07/22 10:48:51
-2021/07/22 10:48:51 Keeping the connection open ...
-2021/07/22 10:48:51 You can connect to the RabbitMQ management UI: http://127.0.0.1:15672/#/connections (Username: guest, Password: guest)
-2021/07/22 10:48:51 	-> Check the Connections Tab and see the Connection Name
-2021/07/22 10:48:51 Hit CTRL + C or cancel the process to stop.
-2021/07/22 10:48:51
+2021/07/30 19:45:37 Connecting to RabbitMQ on amqp://guest:guest@127.0.0.1:5672/
+2021/07/30 19:45:37 Connecting to RabbitMQ on amqp://guest:guest@127.0.0.1:5672/ ... Successful
+2021/07/30 19:45:37
+2021/07/30 19:45:37 Keeping the connection open ...
+2021/07/30 19:45:37 You can connect to the RabbitMQ management UI: http://127.0.0.1:15672/#/connections (Username: guest, Password: guest)
+2021/07/30 19:45:37 	-> Check the Connections Tab and see the Connection Name
+2021/07/30 19:45:37 Hit CTRL + C or cancel the process to stop.
+2021/07/30 19:45:37
 ```
 
 4. Visit the RabbitMQ Management UI at http://127.0.0.1:15672/#/connections (Username: guest, Password: guest) and confirm the connection name.

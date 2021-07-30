@@ -8,7 +8,7 @@ define('RABBITMQ_PORT', 5672);
 define('RABBITMQ_USERNAME', 'guest');
 define('RABBITMQ_PASSWORD', 'guest');
 define('RABBITMQ_ADDRESS', 'amqp://' . RABBITMQ_USERNAME . ':' . RABBITMQ_PASSWORD . '@' . RABBITMQ_HOST . ':' . RABBITMQ_PORT . '/');
-define('RABBITMQ_CONNECTION_NAME', 'your-connection-deserves-a-name-php');
+define('CONNECTION_NAME', 'stock-exchange-rates-app');
 define('RABBITMQ_MANAGEMENT_UI', 'http://' . RABBITMQ_HOST . ':15672/#/connections');
 
 // Doing all the magic: Setting a proper connection name.
@@ -25,7 +25,7 @@ define('RABBITMQ_MANAGEMENT_UI', 'http://' . RABBITMQ_HOST . ':15672/#/connectio
 //      This seems to be a "hacky" solution by the library "php-amqplib/php-amqplib".
 //      It is possible to change in future.
 //      Please keep track of https://github.com/php-amqplib/php-amqplib/issues/728
-AMQPStreamConnection::$LIBRARY_PROPERTIES['connection_name'] = array('S', RABBITMQ_CONNECTION_NAME);
+AMQPStreamConnection::$LIBRARY_PROPERTIES['connection_name'] = array('S', CONNECTION_NAME);
 
 // Building the connection
 output('Connecting to RabbitMQ on ' . RABBITMQ_ADDRESS);

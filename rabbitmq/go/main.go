@@ -8,9 +8,9 @@ import (
 )
 
 const (
-	RabbitMQAddress        = "amqp://guest:guest@127.0.0.1:5672/"
-	RabbitMQManagementUI   = "http://127.0.0.1:15672/#/connections"
-	RabbitMQConnectionName = "your-connection-deserves-a-name-go"
+	RabbitMQAddress      = "amqp://guest:guest@127.0.0.1:5672/"
+	RabbitMQManagementUI = "http://127.0.0.1:15672/#/connections"
+	ConnectionName       = "currency-conversion-app"
 )
 
 func main() {
@@ -28,16 +28,18 @@ func main() {
 	//	- Connections: Client-Provided Connection Name: https://www.rabbitmq.com/connections.html#client-provided-names
 	config := amqp.Config{
 		Properties: amqp.Table{
-			"connection_name": RabbitMQConnectionName,
+			"connection_name": ConnectionName,
 		},
 	}
 
-	conn, err := amqp.DialConfig(RabbitMQAddress, config)
+	client, err := amqp.DialConfig(RabbitMQAddress, config)
 	if err != nil {
 		panic(err)
 	}
 	defer func() {
-		conn.Close() // Dropping err for simplicity
+		if err = client.Close(); err != nil {
+			panic(err)
+		}
 	}()
 	log.Printf("Connecting to RabbitMQ on %s ... Successful\n", RabbitMQAddress)
 
