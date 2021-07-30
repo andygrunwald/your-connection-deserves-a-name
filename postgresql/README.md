@@ -14,7 +14,7 @@ While creating a connection to PostgreSQL, you can provide a client name in the 
 The property is called [`application_name`](https://www.postgresql.org/docs/9.0/runtime-config-logging.html#GUC-APPLICATION-NAME) and is part of [libpq](https://www.postgresql.org/docs/9.0/libpq-connect.html).
 
 ```go
-dsn := "postgres://user:pass@127.0.0.1/database?application_name=your-connection-deserves-a-name-go"
+dsn := "postgres://user:pass@127.0.0.1/database?application_name=currency-conversion-app"
 conn, err := sql.Open("postgres", dsn)
 ```
 

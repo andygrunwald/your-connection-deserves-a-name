@@ -1,4 +1,4 @@
-![PostgreSQL logo](../images/postgresql-logo.png)
+![PostgreSQL logo](../../images/postgresql-logo.png)
 
 # your _PostgreSQL_ connection deserves a name: Go edition
 
