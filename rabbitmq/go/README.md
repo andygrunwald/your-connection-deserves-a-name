@@ -1,3 +1,5 @@
+![RabbitMQ logo](../../images/rabbitmq-logo.png)
+
 # your _RabbitMQ_ connection deserves a name: Go edition
 
 An example on how to assign a name to a [RabbitMQ](https://www.rabbitmq.com/) connection in Go.
@@ -6,7 +8,12 @@ An example on how to assign a name to a [RabbitMQ](https://www.rabbitmq.com/) co
 
 1. Start the RabbitMQ docker container:
 ```sh
-$ docker run --rm --publish 15672:15672 --publish 5672:5672 --name ycdan-rabbitmq --detach rabbitmq:3-management
+$ docker run --rm \
+    --publish 15672:15672 \
+    --publish 5672:5672 \
+    --name ycdan-rabbitmq \
+    --detach \
+    rabbitmq:3-management
 ```
 
 2. Compile the example program:

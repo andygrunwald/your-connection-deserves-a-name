@@ -1,3 +1,5 @@
+![RabbitMQ logo](../images/rabbitmq-logo.png)
+
 # your _RabbitMQ_ connection deserves a name
 
 Examples on how to assign a particular name to a [RabbitMQ](https://www.rabbitmq.com/) connection.
