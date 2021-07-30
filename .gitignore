@@ -1,17 +1,10 @@
-# Redis: PHP
+# PHP
 redis/php/vendor/
-
-# Redis: Go
-redis/go/your-connection-deserves-a-name
-
-# Redis: PHP
 rabbitmq/php/vendor/
 
-# RabbitMQ: Go
-rabbitmq/go/your-connection-deserves-a-name
-
-# PostgreSQL: Go
-postgresql/go/your-connection-deserves-a-name
-
-# MySQL: Go
+# Go
 mysql/go/your-connection-deserves-a-name
+mongodb/go/your-connection-deserves-a-name
+postgresql/go/your-connection-deserves-a-name
+rabbitmq/go/your-connection-deserves-a-name
+redis/go/your-connection-deserves-a-name

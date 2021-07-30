@@ -1,3 +1,5 @@
+![MongoDB logo](../../images/mongodb-logo.png)
+
 # your _MongoDB_ connection deserves a name: Go edition
 
 An example on how to assign a name to a [MongoDB](https://www.mongodb.com/) connection in Go.
@@ -47,7 +49,7 @@ db.currentOp()
 
 In the key `appName` you can confirm your connection name:
 
-![Screenshot of the db.currentOp() query.](../db.currentOp.png)
+![Screenshot of the db.currentOp() query.](../../images/mongodb-db.currentOp.png)
 
 Alternatively, you can also check the server logs:
 

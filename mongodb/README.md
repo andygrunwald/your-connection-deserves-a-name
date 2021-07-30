@@ -1,3 +1,5 @@
+![MongoDB logo](../images/mongodb-logo.png)
+
 # your _MongoDB_ connection deserves a name
 
 Examples on how to assign a particular name to a [MongoDB](https://www.mongodb.com/) connection.
@@ -5,6 +7,7 @@ Examples on how to assign a particular name to a [MongoDB](https://www.mongodb.c
 Programmming languages:
 
 - [Go](./go)
+
 
 ## How it works
 
@@ -18,7 +21,7 @@ client, err := mongo.Connect(ctx, options.Client().ApplyURI(dsn))
 
 To see which clients are connected (incl. their application name), you can query `db.currentOp()`:
 
-![Screenshot of the db.currentOp() query.](db.currentOp.png)
+![Screenshot of the db.currentOp() query.](../images/mongodb-db.currentOp.png)
 
 or check the server logs:
 
