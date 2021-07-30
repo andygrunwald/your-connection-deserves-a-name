@@ -26,7 +26,7 @@ id=3 addr=172.17.0.1:61516 name=currency-conversion-app [...]
 
 ### Before
 
-![redis: Client List without name](../images/redis-client-list-without-name.jpg)
+![redis: Client List without name](../images/redis-client-list-without-name.png)
 
 ## After
 
