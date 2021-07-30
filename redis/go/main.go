@@ -9,8 +9,8 @@ import (
 )
 
 const (
-	RedisAddress        = "localhost:6379"
-	RedisConnectionName = "your-connection-deserves-a-name-go"
+	RedisAddress   = "localhost:6379"
+	ConnectionName = "currency-conversion-app"
 )
 
 func main() {
@@ -19,7 +19,6 @@ func main() {
 	r := redis.NewClient(&redis.Options{
 		Addr: RedisAddress,
 		OnConnect: func(ctx context.Context, conn *redis.Conn) error {
-
 			// Doing all the magic: Setting a proper connection name.
 			//
 			// In redis this is supported via the command "CLIENT SETNAME <connection-name>".
@@ -31,15 +30,17 @@ func main() {
 			//	- CLIENT SETNAME: https://redis.io/commands/client-setname
 			//	- CLIENT GETNAME: https://redis.io/commands/client-getname
 			//	- CLIENT LIST: https://redis.io/commands/client-list
-			log.Printf("Setting client name \"%s\"", RedisConnectionName)
-			err := conn.ClientSetName(ctx, RedisConnectionName).Err()
-			log.Printf("Setting client name \"%s\" ... Successful", RedisConnectionName)
+			log.Printf("Setting client name \"%s\"", ConnectionName)
+			err := conn.ClientSetName(ctx, ConnectionName).Err()
+			log.Printf("Setting client name \"%s\" ... Successful", ConnectionName)
 
 			return err
 		},
 	})
 	defer func() {
-		r.Close() // Dropping err for simplicity
+		if err := r.Close(); err != nil {
+			panic(err)
+		}
 	}()
 
 	// Sending a PING to ensure the connection is build up (lazy connection handling)

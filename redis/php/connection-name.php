@@ -2,7 +2,7 @@
 require_once __DIR__ . '/vendor/autoload.php';
 
 define('REDIS_ADDRESS', 'tcp://127.0.0.1:6379');
-define('REDIS_CONNECTION_NAME', 'your-connection-deserves-a-name-php');
+define('CONNECTION_NAME', 'stock-exchange-rates-app');
 
 // Building the connection
 output('Connecting to Redis on ' . REDIS_ADDRESS);
@@ -20,9 +20,9 @@ output('Connecting to Redis on ' . REDIS_ADDRESS . '  ... Successful');
 //	- CLIENT SETNAME: https://redis.io/commands/client-setname
 //	- CLIENT GETNAME: https://redis.io/commands/client-getname
 //	- CLIENT LIST: https://redis.io/commands/client-list
-output('Setting client name "' . REDIS_CONNECTION_NAME . '"');
-$client->client('SETNAME', REDIS_CONNECTION_NAME);
-output('Setting client name "' . REDIS_CONNECTION_NAME . '" ... Successful');
+output('Setting client name "' . CONNECTION_NAME . '"');
+$client->client('SETNAME', CONNECTION_NAME);
+output('Setting client name "' . CONNECTION_NAME . '" ... Successful');
 
 output('');
 output('Playing PING/PONG to keep connection open ...');
