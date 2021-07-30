@@ -30,7 +30,7 @@ id=3 addr=172.17.0.1:61516 name=currency-conversion-app [...]
 
 ## After
 
-![redis: Client List with name](../images/redis-client-list-with-name.jpg)
+![redis: Client List with name](../images/redis-client-list-with-name.png)
 
 ## Don't know what this is all about?
 
