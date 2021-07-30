@@ -1,3 +1,5 @@
+![PostgreSQL logo](../images/postgresql-logo.png)
+
 # your _PostgreSQL_ connection deserves a name
 
 Examples on how to assign a particular name to a [PostgreSQL](https://www.postgresql.org/) connection.
@@ -21,20 +23,10 @@ To see which clients are connected (incl. their application name), you can query
 ```sql
 postgres=# SELECT usename, application_name, client_addr, backend_type FROM pg_stat_activity;
 
- usename  |          application_name          | client_addr |         backend_type
-----------+------------------------------------+-------------+------------------------------
- postgres | your-connection-deserves-a-name-go | 172.17.0.1  | client backend
+ usename  |    application_name     | client_addr |  backend_type
+----------+-------------------------+-------------+---------------
+ postgres | currency-conversion-app | 172.17.0.1  | client backend
 ```
-
-## How it looks like
-
-### Before
-
-TODO
-
-## After
-
-TODO
 
 ## Don't know what this is all about?
 

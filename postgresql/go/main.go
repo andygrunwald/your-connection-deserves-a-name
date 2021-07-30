@@ -10,8 +10,8 @@ import (
 )
 
 const (
-	PostgreSQLAddress        = "postgres://postgres:postgrespassword@127.0.0.1/postgres"
-	PostgreSQLConnectionName = "your-connection-deserves-a-name-go"
+	PostgreSQLAddress = "postgres://postgres:postgrespassword@127.0.0.1/postgres"
+	ConnectionName    = "currency-conversion-app"
 )
 
 func main() {
@@ -32,18 +32,22 @@ func main() {
 	// PostgreSQL docs:
 	//	- Runtime config: application_name: https://www.postgresql.org/docs/9.0/runtime-config-logging.html#GUC-APPLICATION-NAME
 	//	- libpq connect: https://www.postgresql.org/docs/9.0/libpq-connect.html
-	connStr := fmt.Sprintf("%s?sslmode=disable&application_name=%s", PostgreSQLAddress, PostgreSQLConnectionName)
-	conn, err := sql.Open("postgres", connStr)
+	//
+	dsn := fmt.Sprintf("%s?sslmode=disable&application_name=%s", PostgreSQLAddress, ConnectionName)
+
+	client, err := sql.Open("postgres", dsn)
 	if err != nil {
 		panic(err)
 	}
 	defer func() {
-		conn.Close() // Dropping err for simplicity
+		if err = client.Close(); err != nil {
+			panic(err)
+		}
 	}()
 
 	// Establish the connection, because depending on the DB driver, we might only
 	// validate the credentials, but don't built up a connection.
-	err = conn.Ping()
+	err = client.Ping()
 	if err != nil {
 		panic(err)
 	}
@@ -60,6 +64,10 @@ func main() {
 	// In detail we do not keep the connection active, but rely on the standard timeout.
 	// This way we provide time for the user to check the connection name behaviour.
 	for {
+		err = client.Ping()
+		if err != nil {
+			panic(err)
+		}
 		time.Sleep(5 * time.Second)
 	}
 }
