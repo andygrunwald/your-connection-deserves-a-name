@@ -2,9 +2,10 @@
 
 # your connection deserves a name
 
-👀 When your app interacts with an external system (e.g., a datastore), **assign a name to the connection**.
+👀 When your app interacts with an external system, **assign a name to the connection**.
+An external system in this context can be things like a **database**, a **cache**, a **message queue** or an **HTTP endpoint**.
 
-🎯 The goal should be: the **external system knows who you are**.
+🎯 The goal should be: the **external system can identify their clients**.
 
 🔥 During an incident, it will **reduce the time to debug by multiple hours** and often save other applications from failing.
 
