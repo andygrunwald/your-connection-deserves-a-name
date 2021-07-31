@@ -1,40 +1,57 @@
+![MySQL logo](../images/mysql-logo.png)
+
 # your _MySQL_ connection deserves a name
 
 Examples on how to assign a particular name to a [MySQL](https://www.mysql.com/) connection.
 
 Programmming languages:
 
-- [Go](./go)
+- [Python](./python)
+- Go: Not supported yet, see [Support for sending connection attributes #737 @ go-sql-driver/mysql](https://github.com/go-sql-driver/mysql/pull/737)
+- PHP: Not supported yet, see [Add possibility to add MySQL Connection Attributes (incl. custom ones) @ PHP Bugtracker](https://bugs.php.net/bug.php?id=81314)
 
 ## How it works
 
-Sadly, MySQL **does not provide a dedicated feature to assign a particular name to a connection**.
+While creating a [connection to MySQL, you can set connection attributes](https://dev.mysql.com/doc/refman/8.0/en/performance-schema-connection-attribute-tables.html).
+Depending on the client library this is either part of the data source name (dsn)/connection string or provided via a function call (mostly setting a kind of option).
 
-However, there is a workaround:
-Ensuring that each application operates on its own username.
+For the application name, the connection attribute `program_name` is suggested.
+Even if this is not a strict rule, it has been established as best practice.
+Many applications follow this suggestion.
 
-For this, a bit of preparation is needed:
-* Get to know which database operations the application is executing
-* Create a new database user with particular permissions
+Here is an example in Python with the [PyMySQL library](https://pypi.org/project/PyMySQL/):
 
-The [`CREATE USER`](https://dev.mysql.com/doc/refman/8.0/en/create-user.html) and [GRANT](https://dev.mysql.com/doc/refman/8.0/en/grant.html) Statements provide instructions on how to create a user and assign particulr permissions.
-
-Use this new user to build up the connection:
-
-```go
-// <user>:<password>@<ip>:<port>/<database-namee>
-dsn := "stock-exchange-rates-app:newyork@/connection_name"
-conn, err := sql.Open("mysql", dsn)
+```python
+connection = pymysql.connect(
+                host='127.0.0.1',
+                user='root',
+                password='secret',
+                database='dummy',
+                charset='utf8mb4',
+                cursorclass=pymysql.cursors.DictCursor,
+                program_name='unit-conversion-app',
+            )
 ```
 
-To see which clients are connected (incl. their username), you can query the [processlist](https://dev.mysql.com/doc/refman/8.0/en/show-processlist.html):
+To see which clients are connected (incl. their application name), you can query the `performance_schema` and `information_schema` schema:
 
 ```sql
-SHOW PROCESSLIST;
+SELECT
+	session_connect_attrs.ATTR_VALUE AS program_name,
+	processlist.*
+FROM information_schema.processlist
+LEFT JOIN  performance_schema.session_connect_attrs ON (
+	processlist.ID = session_connect_attrs.PROCESSLIST_ID
+	AND session_connect_attrs.ATTR_NAME = "program_name"
+)
+```
 
-Id	User	                    Host	            db	            Command	Time	State	                Info
-8	root	                    172.17.0.1:59426	connection_name	Query	0	    init	                SHOW PROCESSLIST
-10	stock-exchange-rates-app	172.17.0.1:59434	connection_name	Sleep	5		                        NULL
+The result should look similar to:
+
+```
+program_name        | ID | USER | HOST             | DB    | [...]
+--------------------+----+------+------------------+-------+------
+unit-conversion-app | 11 | root | 172.17.0.1:56382 | dummy | [...]
 ```
 
 ## Don't know what this is all about?
