@@ -51,6 +51,6 @@ postgres=# SELECT usename, application_name, client_addr, backend_type FROM pg_s
 
 ## Don't know what this is all about?
 
-Read the original blog post [_your connection deserves a name @ andygrunwald.com_](https://andygrunwald.com/blog/your-connection-deserves-a-name/ "Article your connection deserves a name at Andy Grunwalds blog").
+Read the original blog post [_your database connection deserves a name @ andygrunwald.com_](https://andygrunwald.com/blog/your-database-connection-deserves-a-name/ "Article your database connection deserves a name at Andy Grunwalds blog").
 
 Additionally, you can check out the [projects README](https://github.com/andygrunwald/your-connection-deserves-a-name#readme).

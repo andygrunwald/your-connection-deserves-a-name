@@ -9,7 +9,7 @@ An external system in this context can be things like a **database**, a **cache*
 
 🔥 During an incident, it will **reduce the time to debug by multiple hours** and often save other applications from failing.
 
-➡️ Read more about this at [_your connection deserves a name @ andygrunwald.com_](https://andygrunwald.com/blog/your-connection-deserves-a-name/ "Article your connection deserves a name at Andy Grunwalds blog").
+➡️ Read more about this at [_your database connection deserves a name @ andygrunwald.com_](https://andygrunwald.com/blog/your-database-connection-deserves-a-name/ "Article your database connection deserves a name at Andy Grunwalds blog").
 
 ## How to do it (with examples)
 

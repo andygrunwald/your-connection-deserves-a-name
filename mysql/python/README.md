@@ -69,6 +69,6 @@ unit-conversion-app | 11 | root | 172.17.0.1:56382 | dummy | [...]
 
 ## Don't know what this is all about?
 
-Read the original blog post [_your connection deserves a name @ andygrunwald.com_](https://andygrunwald.com/blog/your-connection-deserves-a-name/ "Article your connection deserves a name at Andy Grunwalds blog").
+Read the original blog post [_your database connection deserves a name @ andygrunwald.com_](https://andygrunwald.com/blog/your-database-connection-deserves-a-name/ "Article your database connection deserves a name at Andy Grunwalds blog").
 
 Additionally, you can check out the [projects README](https://github.com/andygrunwald/your-connection-deserves-a-name#readme).
