@@ -40,7 +40,7 @@ with connection:
 
     output("")
     output("Keeping the connection open ...")
-    output("You can connect to the PostgreSQL database and execute the query:")
+    output("You can connect to the MySQL database and execute the query:")
     output("	SELECT")
     output("	    session_connect_attrs.ATTR_VALUE AS program_name,")
     output("	    processlist.*")

@@ -6,7 +6,7 @@ An example on how to assign a name to a [MySQL](https://www.mysql.com/) connecti
 
 ## Get it running
 
-1. Start the PostgreSQL docker container:
+1. Start the MySQL docker container:
 ```sh
 $ docker run --rm \
     --publish 3306:3306 \
@@ -34,7 +34,7 @@ You should see something like
 2021/07/31 08:39:14 Connecting to MySQL on mysql://root:secret@127.0.0.1/dummy  ... Successful
 2021/07/31 08:39:14
 2021/07/31 08:39:14 Keeping the connection open ...
-2021/07/31 08:39:14 You can connect to the PostgreSQL database and execute the query:
+2021/07/31 08:39:14 You can connect to the MySQL database and execute the query:
 2021/07/31 08:39:14 	SELECT
 2021/07/31 08:39:14 	    session_connect_attrs.ATTR_VALUE AS program_name,
 2021/07/31 08:39:14 	    processlist.*
