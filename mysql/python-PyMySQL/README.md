@@ -1,6 +1,6 @@
 ![MySQL logo](../../images/mysql-logo.png)
 
-# your _MySQL_ connection deserves a name: Python edition
+# your _MySQL_ connection deserves a name: Python edition (with PyMySQL)
 
 An example on how to assign a name to a [MySQL](https://www.mysql.com/) connection in Python.
 

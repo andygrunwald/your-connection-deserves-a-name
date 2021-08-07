@@ -6,7 +6,8 @@ Examples on how to assign a particular name to a [MySQL](https://www.mysql.com/)
 
 Programmming languages:
 
-- [Python](./python)
+- [Python (with PyMySQL)](./python-PyMySQL)
+- [Python (with mysql-connector-python)](./python-mysql-connector-python)
 - Go: Not supported yet, see [Support for sending connection attributes #737 @ go-sql-driver/mysql](https://github.com/go-sql-driver/mysql/pull/737)
 - PHP: Not supported yet, see [Add possibility to add MySQL Connection Attributes (incl. custom ones) @ PHP Bugtracker](https://bugs.php.net/bug.php?id=81314)
 
