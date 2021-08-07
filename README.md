@@ -17,6 +17,7 @@ This repository provides you example code for various systems in different progr
 
 - [MongoDB](./mongodb/)
 - [MySQL](./mysql/)
+- [NATS](./nats/)
 - [PostgreSQL](./postgresql/)
 - [RabbitMQ](./rabbitmq/)
 - [redis](./redis/)
