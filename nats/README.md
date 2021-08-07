@@ -26,11 +26,40 @@ PS: The NATS team offers a [demo server at `demo.nats.io`](https://docs.nats.io/
 
 ### Before
 
-TODO
+```sh
+$ curl http://127.0.0.1:8222/connz
+{
+  [...]
+  "connections": [
+    {
+      "ip": "172.17.0.1",
+      "port": 57046,
+      [...]
+      "lang": "go",
+      "version": "1.11.0"
+    }
+  ]
+}
+```
 
 ## After
 
-TODO
+```sh
+$ curl http://127.0.0.1:8222/connz
+{
+  [...]
+  "connections": [
+    {
+      "ip": "172.17.0.1",
+      "port": 57054,
+      [...]
+      "name": "currency-conversion-app",
+      "lang": "go",
+      "version": "1.11.0"
+    }
+  ]
+}
+```
 
 ## Don't know what this is all about?
 
