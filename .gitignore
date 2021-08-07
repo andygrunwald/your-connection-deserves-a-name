@@ -4,6 +4,7 @@ rabbitmq/php/vendor/
 
 # Go
 mysql/go/your-connection-deserves-a-name
+nats/go/your-connection-deserves-a-name
 mongodb/go/your-connection-deserves-a-name
 postgresql/go/your-connection-deserves-a-name
 rabbitmq/go/your-connection-deserves-a-name
