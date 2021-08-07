@@ -2,7 +2,7 @@
 
 # your _NATS_ connection deserves a name
 
-Examples on how to assign a particular name to a [NATS.iohttps://nats.io/) connection.
+Examples on how to assign a particular name to a [NATS.io](https://nats.io/) connection.
 
 Programmming languages:
 
