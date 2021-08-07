@@ -20,6 +20,8 @@ nc, err := nats.Connect("demo.nats.io", nats.Name("currency-conversion-app"))
 
 Via the [NATS monitoring endpoint](https://docs.nats.io/nats-server/configuration/monitoring#connection-information "Monitoring endpoint @ NATS docs"), you can see all connected clients, including their names.
 
+PS: The NATS team offers a [demo server at `demo.nats.io`](https://docs.nats.io/nats-protocol/nats-protocol-demo "NATS demo servier"). See [http://demo.nats.io:8222/connz](http://demo.nats.io:8222/connz).
+
 ## How it looks like
 
 ### Before
