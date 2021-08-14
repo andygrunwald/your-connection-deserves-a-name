@@ -3,6 +3,7 @@ redis/php/vendor/
 rabbitmq/php/vendor/
 
 # Go
+mssql/go/your-connection-deserves-a-name
 mysql/go/your-connection-deserves-a-name
 nats/go/your-connection-deserves-a-name
 mongodb/go/your-connection-deserves-a-name
