@@ -8,7 +8,7 @@ Programmming languages:
 
 - [Go](./go)
 
-## How it works (TODO)
+## How it works
 
 While creating a [connection to SQL-Server, you can set an `Application Name`](https://docs.microsoft.com/en-us/dotnet/api/system.data.sqlclient.sqlconnection.connectionstring?view=dotnet-plat-ext-5.0).
 This is (mostly) part part of the data source name (dsn)/connection string.
