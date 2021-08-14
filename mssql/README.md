@@ -11,7 +11,7 @@ Programmming languages:
 ## How it works
 
 While creating a [connection to SQL-Server, you can set an `Application Name`](https://docs.microsoft.com/en-us/dotnet/api/system.data.sqlclient.sqlconnection.connectionstring?view=dotnet-plat-ext-5.0).
-This is (mostly) part part of the data source name (dsn)/connection string.
+This is (mostly) part of the data source name (dsn)/connection string.
 
 Here is an example in Go:
 
