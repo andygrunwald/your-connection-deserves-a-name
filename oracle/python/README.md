@@ -2,7 +2,7 @@
 
 # your _Oracle_ connection deserves a name: Python edition
 
-An example on how to assign a name to a [Oracle Database](https://www.oracle.com/de/database/technologies/appdev/xe.html) connection in Python.
+An example of assigning a name to a [Oracle Database](https://www.oracle.com/de/database/technologies/appdev/xe.html) connection in Python.
 
 ## Get it running
 
@@ -37,20 +37,32 @@ You should see something like
 2021/08/20 17:12:09
 2021/08/20 17:12:09 Keeping the connection open ...
 2021/08/20 17:12:09 You can connect to the Oracle database and execute the query:
-2021/08/20 17:12:09 	SELECT username, client_identifier, module, action FROM v$session WHERE username='DEMO';
+2021/08/20 17:12:09     SELECT username, client_identifier, module, action FROM v$session WHERE username='DEMO';
 2021/08/20 17:12:09
 2021/08/20 17:12:09 or with current query:
-2021/08/20 17:12:09 	SELECT sess.username, sess.client_identifier, sess.module, sess.action, area.sql_text
-2021/08/20 17:12:09 	FROM v$session sess, v$sqlarea area
-2021/08/20 17:12:09 	WHERE
-2021/08/20 17:12:09 		sess.sql_address = area.address
-2021/08/20 17:12:09 		AND sess.username = 'DEMO';
+2021/08/20 17:12:09     SELECT sess.username, sess.client_identifier, sess.module, sess.action, area.sql_text
+2021/08/20 17:12:09     FROM v$session sess, v$sqlarea area
+2021/08/20 17:12:09     WHERE
+2021/08/20 17:12:09         sess.sql_address = area.address
+2021/08/20 17:12:09         AND sess.username = 'DEMO';
 2021/08/20 17:12:09 Hit CTRL + C or cancel the process to stop.
 2021/08/20 17:12:09
 ```
 
 4. Login into your database and execute the query (e.g., with _sqlplus_):
+
+```sh
+$ sqlplus sys/secret@127.0.0.1:1521/connection_showcase as sysdba
+```
+
+This will kick off the SQL prompt, and you can proceed with ...
+
 ```sql
+SQL> COLUMN username FORMAT a15 WORD_WRAPPED
+SQL> COLUMN client_identifier FORMAT a25 WORD_WRAPPED
+SQL> COLUMN module FORMAT a15 WORD_WRAPPED
+SQL> COLUMN action FORMAT a15 WORD_WRAPPED
+
 SQL> SELECT username, client_identifier, module, action FROM v$session WHERE username='DEMO';
 
 USERNAME        CLIENT_IDENTIFIER         MODULE          ACTION
