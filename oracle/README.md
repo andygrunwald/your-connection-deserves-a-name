@@ -7,6 +7,7 @@ Examples on how to assign a particular name to a [Oracle Database](https://www.o
 Programmming languages:
 
 - [Go](./go)
+- [Java](./java)
 - [Python](./python)
 
 ## How it works
