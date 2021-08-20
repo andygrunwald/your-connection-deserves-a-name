@@ -17,6 +17,12 @@ const (
 	OraclePassword = "showcase"
 	OracleAddress  = "127.0.0.1:1521/connection_showcase"
 	ConnectionName = "currency-conversion-app"
+
+	// Additional DBMS_APPLICATION_INFO
+	ClientInfo = "Demo showcase"
+	DbOp       = "ping"
+	Module     = "oracle/go"
+	Action     = "main"
 )
 
 func main() {
@@ -55,10 +61,10 @@ func main() {
 	//
 	ctx := godror.ContextWithTraceTag(context.Background(), godror.TraceTag{
 		ClientIdentifier: ConnectionName,
-		ClientInfo:       "Demo showcase",
-		DbOp:             "ping",
-		Module:           "oracle/go",
-		Action:           "main",
+		ClientInfo:       ClientInfo,
+		DbOp:             DbOp,
+		Module:           Module,
+		Action:           Action,
 	})
 
 	// Establish the connection, because depending on the DB driver, we might only
