@@ -10,3 +10,4 @@ mongodb/go/your-connection-deserves-a-name
 postgresql/go/your-connection-deserves-a-name
 rabbitmq/go/your-connection-deserves-a-name
 redis/go/your-connection-deserves-a-name
+oracle/go/your-connection-deserves-a-name
