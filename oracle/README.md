@@ -10,7 +10,7 @@ Programmming languages:
 
 ## How it works
 
-While executing a query on the Oracle database, you can provide a the client name (and other client information) as query parameters.
+While executing a query on the Oracle database, you can provide a client name (and other client information) as query parameters.
 This is called [`DBMS_APPLICATION_INFO`](https://docs.oracle.com/en/database/oracle/oracle-database/18/arpls/DBMS_APPLICATION_INFO.html#GUID-14484F86-44F2-4B34-B34E-0C873D323EAD).
 
 Here is an example how it works in Go (using [github.com/godror/godror](https://github.com/godror/godror)):
@@ -41,9 +41,9 @@ WHERE
     sess.sql_address = area.address
     AND sess.username = 'DEMO';
 
-USERNAME	    CLIENT_IDENTIFIER	      MODULE	      ACTION	      SQL_TEXT
---------------- ------------------------- --------------- --------------- ----------------------------------------
-DEMO		    currency-conversion-app   oracle/go	      main		      SELECT sysdate FROM dual
+USERNAME        CLIENT_IDENTIFIER         MODULE          ACTION          SQL_TEXT
+--------------- ------------------------- --------------- --------------- ---------------------------
+DEMO            currency-conversion-app   oracle/go       main            SELECT sysdate FROM dual
 ```
 
 ## Don't know what this is all about?

@@ -58,9 +58,9 @@ WHERE
     sess.sql_address = area.address
     AND sess.username = 'DEMO';
 
-USERNAME	    CLIENT_IDENTIFIER	      MODULE	      ACTION	      SQL_TEXT
---------------- ------------------------- --------------- --------------- ----------------------------------------
-DEMO		    currency-conversion-app   oracle/go	      main		      SELECT sysdate FROM dual
+USERNAME        CLIENT_IDENTIFIER         MODULE          ACTION          SQL_TEXT
+--------------- ------------------------- --------------- --------------- ---------------------------
+DEMO            currency-conversion-app   oracle/go       main            SELECT sysdate FROM dual
 ```
 
 ## Don't know what this is all about?
