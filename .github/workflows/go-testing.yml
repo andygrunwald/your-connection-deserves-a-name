@@ -22,3 +22,99 @@ jobs:
 
       - name: Run go build .
         run: go build
+
+  mssql:
+    name: MSSQL
+    runs-on: ubuntu-20.04
+    defaults:
+      run:
+        working-directory: mssql/go
+
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-go@v3
+        with:
+          go-version:  '1.19'
+
+      - name: Run go build .
+        run: go build
+
+  nats:
+    name: NATS
+    runs-on: ubuntu-20.04
+    defaults:
+      run:
+        working-directory: nats/go
+
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-go@v3
+        with:
+          go-version:  '1.19'
+
+      - name: Run go build .
+        run: go build
+
+  oracle:
+    name: Oracle
+    runs-on: ubuntu-20.04
+    defaults:
+      run:
+        working-directory: oracle/go
+
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-go@v3
+        with:
+          go-version:  '1.19'
+
+      - name: Run go build .
+        run: go build
+
+  postgresql:
+    name: PostgreSQL
+    runs-on: ubuntu-20.04
+    defaults:
+      run:
+        working-directory: postgresql/go
+
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-go@v3
+        with:
+          go-version:  '1.19'
+
+      - name: Run go build .
+        run: go build
+
+  rabbitmq:
+    name: RabbitMQ
+    runs-on: ubuntu-20.04
+    defaults:
+      run:
+        working-directory: rabbitmq/go
+
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-go@v3
+        with:
+          go-version:  '1.19'
+
+      - name: Run go build .
+        run: go build
+
+  redis:
+    name: Redis
+    runs-on: ubuntu-20.04
+    defaults:
+      run:
+        working-directory: redis/go
+
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-go@v3
+        with:
+          go-version:  '1.19'
+
+      - name: Run go build .
+        run: go build
