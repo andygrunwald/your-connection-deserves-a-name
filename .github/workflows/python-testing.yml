@@ -1,3 +1,9 @@
+# Very basic testing setup.
+#
+# For most of the code examples, we don't have unit tests.
+# Thats why we are only testing classical "Can we install it".
+# It is not covering everything, but basic things like
+# version conflicts, typos, etc.
 name: Python Testing
 
 on:
