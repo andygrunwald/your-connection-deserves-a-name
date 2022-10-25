@@ -1,0 +1,59 @@
+name: Go Testing
+
+on:
+  push:
+  workflow_dispatch:
+  schedule:
+    - cron: "5 1 * * *"
+
+jobs:
+  mysql-one:
+    name: MySQL (Connector Python)
+    runs-on: ubuntu-20.04
+    defaults:
+      run:
+        working-directory: mysql/python-mysql-connector-python
+
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-python@v4
+        with:
+          python-version-file: '.python-version'
+          cache: 'pip'
+
+      - name: Install python dependencies
+        run: pip install -r requirements.txt
+
+  mysql-two:
+    name: MySQL (PyMySQL)
+    runs-on: ubuntu-20.04
+    defaults:
+      run:
+        working-directory: mysql/python-PyMySQL
+
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-python@v4
+        with:
+          python-version-file: '.python-version'
+          cache: 'pip'
+
+      - name: Install python dependencies
+        run: pip install -r requirements.txt
+
+  oracle:
+    name: Oracle
+    runs-on: ubuntu-20.04
+    defaults:
+      run:
+        working-directory: oracle/python
+
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-python@v4
+        with:
+          python-version-file: '.python-version'
+          cache: 'pip'
+
+      - name: Install python dependencies
+        run: pip install -r requirements.txt
