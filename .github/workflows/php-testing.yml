@@ -12,7 +12,7 @@ jobs:
     runs-on: ubuntu-20.04
     defaults:
       run:
-        working-directory: /rabbitmq/php
+        working-directory: rabbitmq/php
 
     steps:
       - uses: actions/checkout@v3
@@ -27,7 +27,7 @@ jobs:
     runs-on: ubuntu-20.04
     defaults:
       run:
-        working-directory: /redis/php
+        working-directory: redis/php
 
     steps:
       - uses: actions/checkout@v3
