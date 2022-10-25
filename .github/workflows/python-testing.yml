@@ -21,8 +21,8 @@ jobs:
         working-directory: mysql/python-mysql-connector-python/
 
     steps:
-      - uses: actions/checkout@v3
-      - uses: actions/setup-python@v4
+      - uses: actions/checkout@v3.1.0
+      - uses: actions/setup-python@v4.3.0
         with:
           python-version-file: 'mysql/python-mysql-connector-python/.python-version'
           cache: 'pip'
@@ -38,8 +38,8 @@ jobs:
         working-directory: mysql/python-PyMySQL
 
     steps:
-      - uses: actions/checkout@v3
-      - uses: actions/setup-python@v4
+      - uses: actions/checkout@v3.1.0
+      - uses: actions/setup-python@v4.3.0
         with:
           python-version-file: 'mysql/python-PyMySQL/.python-version'
           cache: 'pip'
@@ -55,8 +55,8 @@ jobs:
         working-directory: oracle/python
 
     steps:
-      - uses: actions/checkout@v3
-      - uses: actions/setup-python@v4
+      - uses: actions/checkout@v3.1.0
+      - uses: actions/setup-python@v4.3.0
         with:
           python-version-file: 'oracle/python/.python-version'
           cache: 'pip'
