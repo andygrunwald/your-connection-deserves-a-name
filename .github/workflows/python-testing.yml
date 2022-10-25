@@ -35,7 +35,7 @@ jobs:
       - uses: actions/checkout@v3
       - uses: actions/setup-python@v4
         with:
-          python-version-file: '.python-version'
+          python-version-file: 'mysql/python-PyMySQL/.python-version'
           cache: 'pip'
 
       - name: Install python dependencies
@@ -52,7 +52,7 @@ jobs:
       - uses: actions/checkout@v3
       - uses: actions/setup-python@v4
         with:
-          python-version-file: '.python-version'
+          python-version-file: 'oracle/python/.python-version'
           cache: 'pip'
 
       - name: Install python dependencies
