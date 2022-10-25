@@ -1,3 +1,11 @@
+# Very basic testing setup.
+#
+# For most of the code examples, we don't have unit tests.
+# Thats why we are testing classical "Can we install it",
+# go vet, staticcheck, go fmt.
+#
+# It is not covering everything, but basic things like
+# version conflicts, typos, etc.
 name: Go Testing
 
 on:
@@ -23,6 +31,10 @@ jobs:
       - name: Run go build .
         run: go build
 
+      - name: Run go fmt
+        if: runner.os != 'Windows'
+        run: diff -u <(echo -n) <(gofmt -d -s .)
+
   mssql:
     name: MSSQL
     runs-on: ubuntu-20.04
@@ -38,6 +50,10 @@ jobs:
 
       - name: Run go build .
         run: go build
+
+      - name: Run go fmt
+        if: runner.os != 'Windows'
+        run: diff -u <(echo -n) <(gofmt -d -s .)
 
   nats:
     name: NATS
@@ -55,6 +71,10 @@ jobs:
       - name: Run go build .
         run: go build
 
+      - name: Run go fmt
+        if: runner.os != 'Windows'
+        run: diff -u <(echo -n) <(gofmt -d -s .)
+
   oracle:
     name: Oracle
     runs-on: ubuntu-20.04
@@ -70,6 +90,10 @@ jobs:
 
       - name: Run go build .
         run: go build
+
+      - name: Run go fmt
+        if: runner.os != 'Windows'
+        run: diff -u <(echo -n) <(gofmt -d -s .)
 
   postgresql:
     name: PostgreSQL
@@ -87,6 +111,10 @@ jobs:
       - name: Run go build .
         run: go build
 
+      - name: Run go fmt
+        if: runner.os != 'Windows'
+        run: diff -u <(echo -n) <(gofmt -d -s .)
+
   rabbitmq:
     name: RabbitMQ
     runs-on: ubuntu-20.04
@@ -103,6 +131,10 @@ jobs:
       - name: Run go build .
         run: go build
 
+      - name: Run go fmt
+        if: runner.os != 'Windows'
+        run: diff -u <(echo -n) <(gofmt -d -s .)
+
   redis:
     name: Redis
     runs-on: ubuntu-20.04
@@ -118,3 +150,7 @@ jobs:
 
       - name: Run go build .
         run: go build
+
+      - name: Run go fmt
+        if: runner.os != 'Windows'
+        run: diff -u <(echo -n) <(gofmt -d -s .)
