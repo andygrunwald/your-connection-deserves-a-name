@@ -1,0 +1,38 @@
+name: PHP Testing
+
+on:
+  push:
+  workflow_dispatch:
+  schedule:
+    - cron: "5 1 * * *"
+
+jobs:
+  rabbitmq:
+    name: RabbitMQ
+    runs-on: ubuntu-20.04
+    defaults:
+      run:
+        working-directory: /rabbitmq/php
+
+    steps:
+      - uses: actions/checkout@v3
+      - uses: shivammathur/setup-php@v2
+        with:
+          php-version: 8.2
+
+      - run: composer install
+
+  redis:
+    name: Redis
+    runs-on: ubuntu-20.04
+    defaults:
+      run:
+        working-directory: /redis/php
+
+    steps:
+      - uses: actions/checkout@v3
+      - uses: shivammathur/setup-php@v2
+        with:
+          php-version: 8.2
+
+      - run: composer install
