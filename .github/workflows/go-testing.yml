@@ -35,6 +35,9 @@ jobs:
         if: runner.os != 'Windows'
         run: diff -u <(echo -n) <(gofmt -d -s .)
 
+      - name: Run go vet
+        run: go vet ./...
+
   mssql:
     name: MSSQL
     runs-on: ubuntu-20.04
@@ -54,6 +57,9 @@ jobs:
       - name: Run go fmt
         if: runner.os != 'Windows'
         run: diff -u <(echo -n) <(gofmt -d -s .)
+
+      - name: Run go vet
+        run: go vet ./...
 
   nats:
     name: NATS
@@ -75,6 +81,9 @@ jobs:
         if: runner.os != 'Windows'
         run: diff -u <(echo -n) <(gofmt -d -s .)
 
+      - name: Run go vet
+        run: go vet ./...
+
   oracle:
     name: Oracle
     runs-on: ubuntu-20.04
@@ -94,6 +103,9 @@ jobs:
       - name: Run go fmt
         if: runner.os != 'Windows'
         run: diff -u <(echo -n) <(gofmt -d -s .)
+
+      - name: Run go vet
+        run: go vet ./...
 
   postgresql:
     name: PostgreSQL
@@ -115,6 +127,9 @@ jobs:
         if: runner.os != 'Windows'
         run: diff -u <(echo -n) <(gofmt -d -s .)
 
+      - name: Run go vet
+        run: go vet ./...
+
   rabbitmq:
     name: RabbitMQ
     runs-on: ubuntu-20.04
@@ -135,6 +150,9 @@ jobs:
         if: runner.os != 'Windows'
         run: diff -u <(echo -n) <(gofmt -d -s .)
 
+      - name: Run go vet
+        run: go vet ./...
+
   redis:
     name: Redis
     runs-on: ubuntu-20.04
@@ -154,3 +172,6 @@ jobs:
       - name: Run go fmt
         if: runner.os != 'Windows'
         run: diff -u <(echo -n) <(gofmt -d -s .)
+
+      - name: Run go vet
+        run: go vet ./...
