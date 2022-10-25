@@ -38,6 +38,13 @@ jobs:
       - name: Run go vet
         run: go vet ./...
 
+      - name: Run staticcheck
+        uses: dominikh/staticcheck-action@v1.2.0
+        with:
+          version: "2022.1.3"
+          install-go: false
+          cache-key: staticcheck
+
   mssql:
     name: MSSQL
     runs-on: ubuntu-20.04
@@ -60,6 +67,13 @@ jobs:
 
       - name: Run go vet
         run: go vet ./...
+
+      - name: Run staticcheck
+        uses: dominikh/staticcheck-action@v1.2.0
+        with:
+          version: "2022.1.3"
+          install-go: false
+          cache-key: staticcheck
 
   nats:
     name: NATS
@@ -84,6 +98,13 @@ jobs:
       - name: Run go vet
         run: go vet ./...
 
+      - name: Run staticcheck
+        uses: dominikh/staticcheck-action@v1.2.0
+        with:
+          version: "2022.1.3"
+          install-go: false
+          cache-key: staticcheck
+
   oracle:
     name: Oracle
     runs-on: ubuntu-20.04
@@ -106,6 +127,13 @@ jobs:
 
       - name: Run go vet
         run: go vet ./...
+
+      - name: Run staticcheck
+        uses: dominikh/staticcheck-action@v1.2.0
+        with:
+          version: "2022.1.3"
+          install-go: false
+          cache-key: staticcheck
 
   postgresql:
     name: PostgreSQL
@@ -130,6 +158,13 @@ jobs:
       - name: Run go vet
         run: go vet ./...
 
+      - name: Run staticcheck
+        uses: dominikh/staticcheck-action@v1.2.0
+        with:
+          version: "2022.1.3"
+          install-go: false
+          cache-key: staticcheck
+
   rabbitmq:
     name: RabbitMQ
     runs-on: ubuntu-20.04
@@ -153,6 +188,13 @@ jobs:
       - name: Run go vet
         run: go vet ./...
 
+      - name: Run staticcheck
+        uses: dominikh/staticcheck-action@v1.2.0
+        with:
+          version: "2022.1.3"
+          install-go: false
+          cache-key: staticcheck
+
   redis:
     name: Redis
     runs-on: ubuntu-20.04
@@ -175,3 +217,10 @@ jobs:
 
       - name: Run go vet
         run: go vet ./...
+
+      - name: Run staticcheck
+        uses: dominikh/staticcheck-action@v1.2.0
+        with:
+          version: "2022.1.3"
+          install-go: false
+          cache-key: staticcheck
