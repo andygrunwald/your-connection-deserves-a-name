@@ -1,0 +1,44 @@
+# Very basic testing setup.
+#
+# For most of the code examples, we don't have unit tests.
+# Thats why we are only testing classical "Can we install it".
+# It is not covering everything, but basic things like
+# version conflicts, typos, etc.
+name: PHP Testing
+
+on:
+  push:
+  workflow_dispatch:
+  schedule:
+    - cron: "5 1 * * *"
+
+jobs:
+  rabbitmq:
+    name: RabbitMQ
+    runs-on: ubuntu-20.04
+    defaults:
+      run:
+        working-directory: rabbitmq/php
+
+    steps:
+      - uses: actions/checkout@v3.1.0
+      - uses: shivammathur/setup-php@2.21.2
+        with:
+          php-version: 8.1
+
+      - run: composer install
+
+  redis:
+    name: Redis
+    runs-on: ubuntu-20.04
+    defaults:
+      run:
+        working-directory: redis/php
+
+    steps:
+      - uses: actions/checkout@v3.1.0
+      - uses: shivammathur/setup-php@2.21.2
+        with:
+          php-version: 8.1
+
+      - run: composer install

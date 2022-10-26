@@ -1,0 +1,65 @@
+# Very basic testing setup.
+#
+# For most of the code examples, we don't have unit tests.
+# Thats why we are only testing classical "Can we install it".
+# It is not covering everything, but basic things like
+# version conflicts, typos, etc.
+name: Python Testing
+
+on:
+  push:
+  workflow_dispatch:
+  schedule:
+    - cron: "5 1 * * *"
+
+jobs:
+  mysql-one:
+    name: MySQL (Connector Python)
+    runs-on: ubuntu-20.04
+    defaults:
+      run:
+        working-directory: mysql/python-mysql-connector-python/
+
+    steps:
+      - uses: actions/checkout@v3.1.0
+      - uses: actions/setup-python@v4.3.0
+        with:
+          python-version-file: 'mysql/python-mysql-connector-python/.python-version'
+          cache: 'pip'
+
+      - name: Install python dependencies
+        run: pip install -r requirements.txt
+
+  mysql-two:
+    name: MySQL (PyMySQL)
+    runs-on: ubuntu-20.04
+    defaults:
+      run:
+        working-directory: mysql/python-PyMySQL
+
+    steps:
+      - uses: actions/checkout@v3.1.0
+      - uses: actions/setup-python@v4.3.0
+        with:
+          python-version-file: 'mysql/python-PyMySQL/.python-version'
+          cache: 'pip'
+
+      - name: Install python dependencies
+        run: pip install -r requirements.txt
+
+  oracle:
+    name: Oracle
+    runs-on: ubuntu-20.04
+    defaults:
+      run:
+        working-directory: oracle/python
+
+    steps:
+      - uses: actions/checkout@v3.1.0
+      - uses: actions/setup-python@v4.3.0
+        with:
+          python-version-file: 'oracle/python/.python-version'
+          cache: 'pip'
+
+      - name: Install python dependencies
+        run: pip install -r requirements.txt
