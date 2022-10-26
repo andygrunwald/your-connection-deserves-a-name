@@ -15,12 +15,24 @@ on:
     - cron: "5 1 * * *"
 
 jobs:
-  mongodb:
-    name: MongoDB
+  go:
+    name: build / fmt / vet / staticcheck
+    strategy:
+      fail-fast: false
+      matrix:
+        dir: [
+          "mongodb/go",
+          "mssql/go",
+          "nats/go",
+          "oracle/go",
+          "redis/go",
+          "rabbitmq/go",
+          "postgresql/go"
+        ]
     runs-on: ubuntu-20.04
     defaults:
       run:
-        working-directory: mongodb/go
+        working-directory: ${{ matrix.dir }}
 
     steps:
       - uses: actions/checkout@v3.1.0
@@ -44,190 +56,4 @@ jobs:
           version: "2022.1.3"
           install-go: false
           cache-key: staticcheck
-          working-directory: mongodb/go
-
-  mssql:
-    name: MSSQL
-    runs-on: ubuntu-20.04
-    defaults:
-      run:
-        working-directory: mssql/go
-
-    steps:
-      - uses: actions/checkout@v3.1.0
-      - uses: actions/setup-go@v3.3.1
-        with:
-          go-version:  '1.19'
-
-      - name: Run go build .
-        run: go build
-
-      - name: Run go fmt
-        if: runner.os != 'Windows'
-        run: diff -u <(echo -n) <(gofmt -d -s .)
-
-      - name: Run go vet
-        run: go vet ./...
-
-      - name: Run staticcheck
-        uses: dominikh/staticcheck-action@v1.2.0
-        with:
-          version: "2022.1.3"
-          install-go: false
-          cache-key: staticcheck
-          working-directory: mssql/go
-
-  nats:
-    name: NATS
-    runs-on: ubuntu-20.04
-    defaults:
-      run:
-        working-directory: nats/go
-
-    steps:
-      - uses: actions/checkout@v3.1.0
-      - uses: actions/setup-go@v3.3.1
-        with:
-          go-version:  '1.19'
-
-      - name: Run go build .
-        run: go build
-
-      - name: Run go fmt
-        if: runner.os != 'Windows'
-        run: diff -u <(echo -n) <(gofmt -d -s .)
-
-      - name: Run go vet
-        run: go vet ./...
-
-      - name: Run staticcheck
-        uses: dominikh/staticcheck-action@v1.2.0
-        with:
-          version: "2022.1.3"
-          install-go: false
-          cache-key: staticcheck
-          working-directory: nats/go
-
-  oracle:
-    name: Oracle
-    runs-on: ubuntu-20.04
-    defaults:
-      run:
-        working-directory: oracle/go
-
-    steps:
-      - uses: actions/checkout@v3.1.0
-      - uses: actions/setup-go@v3.3.1
-        with:
-          go-version:  '1.19'
-
-      - name: Run go build .
-        run: go build
-
-      - name: Run go fmt
-        if: runner.os != 'Windows'
-        run: diff -u <(echo -n) <(gofmt -d -s .)
-
-      - name: Run go vet
-        run: go vet ./...
-
-      - name: Run staticcheck
-        uses: dominikh/staticcheck-action@v1.2.0
-        with:
-          version: "2022.1.3"
-          install-go: false
-          cache-key: staticcheck
-          working-directory: oracle/go
-
-  postgresql:
-    name: PostgreSQL
-    runs-on: ubuntu-20.04
-    defaults:
-      run:
-        working-directory: postgresql/go
-
-    steps:
-      - uses: actions/checkout@v3.1.0
-      - uses: actions/setup-go@v3.3.1
-        with:
-          go-version:  '1.19'
-
-      - name: Run go build .
-        run: go build
-
-      - name: Run go fmt
-        if: runner.os != 'Windows'
-        run: diff -u <(echo -n) <(gofmt -d -s .)
-
-      - name: Run go vet
-        run: go vet ./...
-
-      - name: Run staticcheck
-        uses: dominikh/staticcheck-action@v1.2.0
-        with:
-          version: "2022.1.3"
-          install-go: false
-          cache-key: staticcheck
-          working-directory: postgresql/go
-
-  rabbitmq:
-    name: RabbitMQ
-    runs-on: ubuntu-20.04
-    defaults:
-      run:
-        working-directory: rabbitmq/go
-
-    steps:
-      - uses: actions/checkout@v3.1.0
-      - uses: actions/setup-go@v3.3.1
-        with:
-          go-version:  '1.19'
-
-      - name: Run go build .
-        run: go build
-
-      - name: Run go fmt
-        if: runner.os != 'Windows'
-        run: diff -u <(echo -n) <(gofmt -d -s .)
-
-      - name: Run go vet
-        run: go vet ./...
-
-      - name: Run staticcheck
-        uses: dominikh/staticcheck-action@v1.2.0
-        with:
-          version: "2022.1.3"
-          install-go: false
-          cache-key: staticcheck
-          working-directory: rabbitmq/go
-
-  redis:
-    name: Redis
-    runs-on: ubuntu-20.04
-    defaults:
-      run:
-        working-directory: redis/go
-
-    steps:
-      - uses: actions/checkout@v3.1.0
-      - uses: actions/setup-go@v3.3.1
-        with:
-          go-version:  '1.19'
-
-      - name: Run go build .
-        run: go build
-
-      - name: Run go fmt
-        if: runner.os != 'Windows'
-        run: diff -u <(echo -n) <(gofmt -d -s .)
-
-      - name: Run go vet
-        run: go vet ./...
-
-      - name: Run staticcheck
-        uses: dominikh/staticcheck-action@v1.2.0
-        with:
-          version: "2022.1.3"
-          install-go: false
-          cache-key: staticcheck
-          working-directory: redis/go
+          working-directory: ${{ matrix.dir }}
