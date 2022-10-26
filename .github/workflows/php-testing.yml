@@ -13,27 +13,19 @@ on:
     - cron: "5 1 * * *"
 
 jobs:
-  rabbitmq:
-    name: RabbitMQ
+  php:
+    name: Install
+    strategy:
+      fail-fast: false
+      matrix:
+        dir: [
+          "rabbitmq/php",
+          "redis/php"
+        ]
     runs-on: ubuntu-20.04
     defaults:
       run:
-        working-directory: rabbitmq/php
-
-    steps:
-      - uses: actions/checkout@v3.1.0
-      - uses: shivammathur/setup-php@2.21.2
-        with:
-          php-version: 8.1
-
-      - run: composer install
-
-  redis:
-    name: Redis
-    runs-on: ubuntu-20.04
-    defaults:
-      run:
-        working-directory: redis/php
+        working-directory: ${{ matrix.dir }}
 
     steps:
       - uses: actions/checkout@v3.1.0
