@@ -32,7 +32,7 @@ jobs:
       - uses: actions/checkout@v3.1.0
       - uses: actions/setup-python@v4.3.0
         with:
-          python-version-file: "${{ matrix.dir }}.python-version"
+          python-version-file: "${{ matrix.dir }}/.python-version"
           cache: 'pip'
 
       - name: Install python dependencies
