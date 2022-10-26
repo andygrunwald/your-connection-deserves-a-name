@@ -13,52 +13,26 @@ on:
     - cron: "5 1 * * *"
 
 jobs:
-  mysql-one:
-    name: MySQL (Connector Python)
+  python:
+    name: Install
+    strategy:
+      fail-fast: false
+      matrix:
+        dir: [
+          "mysql/python-mysql-connector-python/",
+          "oracle/python",
+          "mysql/python-PyMySQL"
+        ]
     runs-on: ubuntu-20.04
     defaults:
       run:
-        working-directory: mysql/python-mysql-connector-python/
+        working-directory: ${{ matrix.dir }}
 
     steps:
       - uses: actions/checkout@v3.1.0
       - uses: actions/setup-python@v4.3.0
         with:
-          python-version-file: 'mysql/python-mysql-connector-python/.python-version'
-          cache: 'pip'
-
-      - name: Install python dependencies
-        run: pip install -r requirements.txt
-
-  mysql-two:
-    name: MySQL (PyMySQL)
-    runs-on: ubuntu-20.04
-    defaults:
-      run:
-        working-directory: mysql/python-PyMySQL
-
-    steps:
-      - uses: actions/checkout@v3.1.0
-      - uses: actions/setup-python@v4.3.0
-        with:
-          python-version-file: 'mysql/python-PyMySQL/.python-version'
-          cache: 'pip'
-
-      - name: Install python dependencies
-        run: pip install -r requirements.txt
-
-  oracle:
-    name: Oracle
-    runs-on: ubuntu-20.04
-    defaults:
-      run:
-        working-directory: oracle/python
-
-    steps:
-      - uses: actions/checkout@v3.1.0
-      - uses: actions/setup-python@v4.3.0
-        with:
-          python-version-file: 'oracle/python/.python-version'
+          python-version-file: "${{ matrix.dir }}.python-version"
           cache: 'pip'
 
       - name: Install python dependencies
