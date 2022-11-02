@@ -2,7 +2,7 @@ module github.com/andygrunwald/your-connection-deserves-a-name/mongodb/go
 
 go 1.19
 
-require go.mongodb.org/mongo-driver v1.10.3
+require go.mongodb.org/mongo-driver v1.10.4
 
 require (
 	github.com/golang/snappy v0.0.1 // indirect
