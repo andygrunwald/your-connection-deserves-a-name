@@ -2,7 +2,7 @@ module github.com/andygrunwald/your-connection-deserves-a-name/nats/go
 
 go 1.19
 
-require github.com/nats-io/nats.go v1.18.0
+require github.com/nats-io/nats.go v1.20.0
 
 require (
 	github.com/golang/protobuf v1.5.2 // indirect
