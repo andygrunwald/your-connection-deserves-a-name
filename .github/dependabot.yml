@@ -8,59 +8,59 @@ updates:
   - package-ecosystem: "gomod"
     directory: "/mongodb/go"
     schedule:
-      interval: "daily"
+      interval: "monthly"
 
   - package-ecosystem: "gomod"
     directory: "/mssql/go"
     schedule:
-      interval: "daily"
+      interval: "monthly"
   
   - package-ecosystem: "pip"
     directory: "/mysql/python-mysql-connector-python"
     schedule:
-      interval: "daily"
+      interval: "monthly"
 
   - package-ecosystem: "pip"
     directory: "/mysql/python-PyMySQL"
     schedule:
-      interval: "daily"
+      interval: "monthly"
 
   - package-ecosystem: "gomod"
     directory: "/nats/go"
     schedule:
-      interval: "daily"
+      interval: "monthly"
 
   - package-ecosystem: "gomod"
     directory: "/oracle/go"
     schedule:
-      interval: "daily"
+      interval: "monthly"
 
   - package-ecosystem: "pip"
     directory: "/oracle/python"
     schedule:
-      interval: "daily"
+      interval: "monthly"
 
   - package-ecosystem: "gomod"
     directory: "/postgresql/go"
     schedule:
-      interval: "daily"
+      interval: "monthly"
 
   - package-ecosystem: "gomod"
     directory: "/rabbitmq/go"
     schedule:
-      interval: "daily"
+      interval: "monthly"
 
   - package-ecosystem: "composer"
     directory: "/rabbitmq/php"
     schedule:
-      interval: "daily"
+      interval: "monthly"
 
   - package-ecosystem: "gomod"
     directory: "/redis/go"
     schedule:
-      interval: "daily"
+      interval: "monthly"
 
   - package-ecosystem: "composer"
     directory: "/redis/php"
     schedule:
-      interval: "daily"
+      interval: "monthly"
