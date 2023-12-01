@@ -2,7 +2,7 @@ module github.com/andygrunwald/your-connection-deserves-a-name/oracle/go
 
 go 1.19
 
-require github.com/godror/godror v0.40.3
+require github.com/godror/godror v0.40.4
 
 require (
 	github.com/go-logfmt/logfmt v0.6.0 // indirect
