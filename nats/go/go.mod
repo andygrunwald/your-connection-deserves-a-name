@@ -1,6 +1,6 @@
 module github.com/andygrunwald/your-connection-deserves-a-name/nats/go
 
-go 1.19
+go 1.20
 
 require github.com/nats-io/nats.go v1.33.1
 
