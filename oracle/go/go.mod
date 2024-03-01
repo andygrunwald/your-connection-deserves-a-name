@@ -1,6 +1,6 @@
 module github.com/andygrunwald/your-connection-deserves-a-name/oracle/go
 
-go 1.19
+go 1.21
 
 require github.com/godror/godror v0.40.3
 
