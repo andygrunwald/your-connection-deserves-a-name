@@ -10,6 +10,9 @@ name: Go Testing
 
 on:
   push:
+    branches:
+      - main
+  pull_request:
   workflow_dispatch:
   schedule:
     - cron: "5 1 * * *"
