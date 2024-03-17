@@ -14,7 +14,7 @@ $ docker run --rm \
     --env MYSQL_DATABASE=dummy \
     --name ycdan-mysql \
     --detach \
-    mysql:8.0.26 mysqld --default-authentication-plugin=mysql_native_password
+    mysql:8.0.36 mysqld --default-authentication-plugin=mysql_native_password
 ```
 
 2. Install dependencies:
