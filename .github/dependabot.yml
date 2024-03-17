@@ -14,7 +14,12 @@ updates:
     directory: "/mssql/go"
     schedule:
       interval: "monthly"
-  
+
+  - package-ecosystem: "gomod"
+    directory: "/mysql/go"
+    schedule:
+      interval: "monthly"
+
   - package-ecosystem: "pip"
     directory: "/mysql/python-mysql-connector-python"
     schedule:

@@ -26,6 +26,7 @@ jobs:
         dir: [
           "mongodb/go",
           "mssql/go",
+          "mysql/go",
           "nats/go",
           "oracle/go",
           "redis/go",
