@@ -59,5 +59,4 @@ jobs:
         with:
           version: "2023.1.7"
           install-go: false
-          cache-key: staticcheck
           working-directory: ${{ matrix.dir }}
