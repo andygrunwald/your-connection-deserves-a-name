@@ -25,7 +25,7 @@ jobs:
           "rabbitmq/php",
           "redis/php"
         ]
-    runs-on: ubuntu-22.04
+    runs-on: ubuntu-24.04
     defaults:
       run:
         working-directory: ${{ matrix.dir }}
@@ -34,6 +34,6 @@ jobs:
       - uses: actions/checkout@v4.1.7
       - uses: shivammathur/setup-php@2.31.1
         with:
-          php-version: 8.1
+          php-version: 8.3
 
       - run: composer install
