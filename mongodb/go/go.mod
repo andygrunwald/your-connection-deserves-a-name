@@ -2,11 +2,11 @@ module github.com/andygrunwald/your-connection-deserves-a-name/mongodb/go
 
 go 1.19
 
-require go.mongodb.org/mongo-driver v1.17.1
+require go.mongodb.org/mongo-driver v1.17.2
 
 require (
 	github.com/golang/snappy v0.0.4 // indirect
-	github.com/klauspost/compress v1.13.6 // indirect
+	github.com/klauspost/compress v1.16.7 // indirect
 	github.com/montanaflynn/stats v0.7.1 // indirect
 	github.com/xdg-go/pbkdf2 v1.0.0 // indirect
 	github.com/xdg-go/scram v1.1.2 // indirect
