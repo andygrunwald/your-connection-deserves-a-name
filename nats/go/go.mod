@@ -2,7 +2,7 @@ module github.com/andygrunwald/your-connection-deserves-a-name/nats/go
 
 go 1.20
 
-require github.com/nats-io/nats.go v1.38.0
+require github.com/nats-io/nats.go v1.39.1
 
 require (
 	github.com/klauspost/compress v1.17.9 // indirect
