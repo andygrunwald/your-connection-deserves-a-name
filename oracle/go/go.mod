@@ -4,7 +4,7 @@ go 1.23.0
 
 toolchain go1.24.2
 
-require github.com/godror/godror v0.48.0
+require github.com/godror/godror v0.48.1
 
 require (
 	github.com/go-logfmt/logfmt v0.6.0 // indirect
