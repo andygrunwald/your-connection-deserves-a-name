@@ -4,8 +4,8 @@ github.com/go-logfmt/logfmt v0.6.0 h1:wGYYu3uicYdqXVgoYbvnkrPVXkuLM1p1ifugDMEdRi
 github.com/go-logfmt/logfmt v0.6.0/go.mod h1:WYhtIu8zTZfxdn5+rREduYbwxfcBr/Vr6KEVveWlfTs=
 github.com/go-logr/logr v1.2.4 h1:g01GSCwiDw2xSZfjJ2/T9M+S6pFdcNtFYsp+Y43HYDQ=
 github.com/go-logr/logr v1.2.4/go.mod h1:jdQByPbusPIv2/zmleS9BjJVeZ6kBagPoEUsqbVz/1A=
-github.com/godror/godror v0.48.0 h1:woMfeeNWaUKyPJ1fVx5kFS9IPV0a7EKQkWDZvYVgVaQ=
-github.com/godror/godror v0.48.0/go.mod h1:7JBa3m6g1s+5cTlZqEvydklDE30Xon3EALNrQm2iwk0=
+github.com/godror/godror v0.48.1 h1:kLC7meCy4yWvs0UzzTf0RIqeN+wp7SGXLLLbQfpooPM=
+github.com/godror/godror v0.48.1/go.mod h1:7JBa3m6g1s+5cTlZqEvydklDE30Xon3EALNrQm2iwk0=
 github.com/godror/knownpb v0.1.2 h1:icMyYsYVpGmzhoVA01xyd0o4EaubR31JPK1UxQWe4kM=
 github.com/godror/knownpb v0.1.2/go.mod h1:zs9hH+lwj7mnPHPnKCcxdOGz38Axa9uT+97Ng+Nnu5s=
 github.com/google/go-cmp v0.6.0 h1:ofyhxvXcZhMsU5ulbFiLKl/XBFqE1GSq7atu8tAmTRI=
