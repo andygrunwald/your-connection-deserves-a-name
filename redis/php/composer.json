@@ -3,7 +3,7 @@
     "description": "Showcase how to assign a name to a redis connection in PHP.",
     "type": "project",
     "require": {
-        "predis/predis": "^2.0"
+        "predis/predis": "^3.0"
     },
     "license": "MIT",
     "authors": [
