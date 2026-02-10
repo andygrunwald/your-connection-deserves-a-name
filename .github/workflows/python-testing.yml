@@ -23,7 +23,8 @@ jobs:
       matrix:
         dir: [
           "mysql/python-mysql-connector-python/",
-          "oracle/python",
+          # See https://github.com/andygrunwald/your-connection-deserves-a-name/issues/219
+          # "oracle/python",
           "mysql/python-PyMySQL"
         ]
     runs-on: ubuntu-24.04
