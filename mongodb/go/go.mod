@@ -4,7 +4,7 @@ go 1.24.0
 
 toolchain go1.24.2
 
-require go.mongodb.org/mongo-driver v1.17.6
+require go.mongodb.org/mongo-driver v1.17.8
 
 require (
 	github.com/golang/snappy v0.0.4 // indirect
