@@ -33,7 +33,7 @@ jobs:
         working-directory: ${{ matrix.dir }}
 
     steps:
-      - uses: actions/checkout@v6.0.2
+      - uses: actions/checkout@v7.0.0
       - uses: actions/setup-python@v6.2.0
         with:
           python-version-file: "${{ matrix.dir }}/.python-version"
